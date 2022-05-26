@@ -1,0 +1,923 @@
+<?xml version="1.0" ?><?xml-stylesheet type="text/xsl" href="/static/oaitohtml.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2022-05-26T05:50:32Z</responseDate>
+  <request verb="ListRecords" metadataPrefix="oai_dc">https://oai.datacite.org/oai</request>
+  <ListRecords>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/1</identifier>
+        <datestamp>2012-07-31T09:15:30Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/1</identifier>
+        <datestamp>2012-07-31T09:15:30Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/23</identifier>
+        <datestamp>2012-07-31T09:16:00Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/23</identifier>
+        <datestamp>2012-07-31T09:16:00Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/24</identifier>
+        <datestamp>2012-07-31T09:16:11Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/24</identifier>
+        <datestamp>2012-07-31T09:16:11Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20050727120000/http://www.mysteriousbritain.co.uk/folklore/engfairies.html</identifier>
+        <datestamp>2012-07-31T09:15:15Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20050727120000/http://www.mysteriousbritain.co.uk/folklore/engfairies.html</identifier>
+        <datestamp>2012-07-31T09:15:15Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20070410230000/http://www.staffspasttrack.org.uk/exhibit/crimeandpunishment/imagepage/zero.htm</identifier>
+        <datestamp>2012-07-31T09:17:44Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20070410230000/http://www.staffspasttrack.org.uk/exhibit/crimeandpunishment/imagepage/zero.htm</identifier>
+        <datestamp>2012-07-31T09:17:44Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20050726120000/http://www.dur.ac.uk/ian.smail/colmag/colmag_top.html</identifier>
+        <datestamp>2011-03-04T14:18:47Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20050726120000/http://www.dur.ac.uk/ian.smail/colmag/colmag_top.html</identifier>
+        <datestamp>2011-03-04T14:18:47Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20050509230000/http://www.jr2.ox.ac.uk/bandolier/booth/hliving/allium.html</identifier>
+        <datestamp>2011-03-04T15:37:46Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20050509230000/http://www.jr2.ox.ac.uk/bandolier/booth/hliving/allium.html</identifier>
+        <datestamp>2011-03-04T15:37:46Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20071017230000/http://www.bllearning.co.uk/catalogues/evanion/record0ace.html</identifier>
+        <datestamp>2011-03-04T15:42:10Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20071017230000/http://www.bllearning.co.uk/catalogues/evanion/record0ace.html</identifier>
+        <datestamp>2011-03-04T15:42:10Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20090724060918/http://www.bl.uk/treasures/magnacarta/index.html</identifier>
+        <datestamp>2011-03-04T15:56:28Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20090724060918/http://www.bl.uk/treasures/magnacarta/index.html</identifier>
+        <datestamp>2011-03-04T15:56:28Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20050913020355/http://www.freud.org.uk/shopfingerpup.htm</identifier>
+        <datestamp>2011-03-07T15:12:59Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20050913020355/http://www.freud.org.uk/shopfingerpup.htm</identifier>
+        <datestamp>2011-03-07T15:12:59Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20070321000000/http://www.bioregional.com/about%20us/aboutus.htm</identifier>
+        <datestamp>2011-03-08T10:48:01Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20070321000000/http://www.bioregional.com/about%20us/aboutus.htm</identifier>
+        <datestamp>2011-03-08T10:48:01Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20070321000000/http://www.bioregional.com/contactus.htm</identifier>
+        <datestamp>2011-03-08T11:47:50Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5259/20070321000000/http://www.bioregional.com/contactus.htm</identifier>
+        <datestamp>2011-03-08T11:47:50Z</datestamp>
+        <setSpec>VAVQ</setSpec>
+        <setSpec>BL.WAP</setSpec>
+      </header>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000389</identifier>
+        <datestamp>2020-07-28T04:24:14Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Excavations at St Peter's Church, Barton-upon-Humber</dc:title>
+          <dc:creator>H E M Cool</dc:creator>
+          <dc:creator>Bell, Mark</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 1974/2010</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>ads collection id:1030</dc:identifier>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>BEAD</dc:subject>
+          <dc:subject>CERAMIC</dc:subject>
+          <dc:subject>CHURCH</dc:subject>
+          <dc:subject>COIN</dc:subject>
+          <dc:subject>ENCLOSURE</dc:subject>
+          <dc:subject>FLOOR TILE</dc:subject>
+          <dc:subject>Human Bone</dc:subject>
+          <dc:subject>INHUMATION CEMETERY</dc:subject>
+          <dc:subject>PIN</dc:subject>
+          <dc:description>St Peter's Church at Barton-upon-Humber (TA 0347 2194) was declared redundant in 1972 and taken into public guardianship in 1978 by the then Department of Environment. Given that it had long been recognised that it had a late Saxon origin, a major programme of excavation and survey was instituted. This explored the church and its churchyard, and ran from 1978 to 1984 under the direction of Warwick Rodwell. The programme has meant that this is the most intensively studied and recorded parish church in the country. It also produced the largest collection of human remains ever excavated in the UK. The latter provide a unique insight into the population of a small, relatively isolated, market town over 900 years.</dc:description>
+          <dc:contributor>English Heritage</dc:contributor>
+          <dc:contributor>Barbican Research Associates</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>text/csv</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000389</identifier>
+        <datestamp>2020-10-10T04:06:08Z</datestamp>
+        <setSpec>MQKK</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Excavations at St Peter's Church, Barton-upon-Humber</dc:title>
+          <dc:creator>H E M Cool</dc:creator>
+          <dc:creator>Bell, Mark</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 1974/2010</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>BEAD</dc:subject>
+          <dc:subject>CERAMIC</dc:subject>
+          <dc:subject>CHURCH</dc:subject>
+          <dc:subject>COIN</dc:subject>
+          <dc:subject>ENCLOSURE</dc:subject>
+          <dc:subject>FLOOR TILE</dc:subject>
+          <dc:subject>Human Bone</dc:subject>
+          <dc:subject>INHUMATION CEMETERY</dc:subject>
+          <dc:subject>PIN</dc:subject>
+          <dc:description>St Peter's Church at Barton-upon-Humber (TA 0347 2194) was declared redundant in 1972 and taken into public guardianship in 1978 by the then Department of Environment. Given that it had long been recognised that it had a late Saxon origin, a major programme of excavation and survey was instituted. This explored the church and its churchyard, and ran from 1978 to 1984 under the direction of Warwick Rodwell. The programme has meant that this is the most intensively studied and recorded parish church in the country. It also produced the largest collection of human remains ever excavated in the UK. The latter provide a unique insight into the population of a small, relatively isolated, market town over 900 years.</dc:description>
+          <dc:contributor>English Heritage</dc:contributor>
+          <dc:contributor>Barbican Research Associates</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>text/csv</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000140</identifier>
+        <datestamp>2020-07-28T04:24:14Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Identification and quantification of archaeological projects arising from aggregates extraction in Greater London</dc:title>
+          <dc:creator>Museum Of London Archaeology</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 2009</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>ads collection id:1034</dc:identifier>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>London</dc:subject>
+          <dc:description>The project aimed to identify and quantify past archaeological investigations arising from hard and soft aggregates extraction in Greater London, which currently have incomplete or inappropriately low levels of dissemination. The study provides a basis for a future strategy to improve and widen public dissemination of the results of such investigations, including the deposition of data into a publicly accessible research archive.</dc:description>
+          <dc:contributor>Museum Of London Archaeology</dc:contributor>
+          <dc:contributor>Aggregates Levy Sustainability Fund</dc:contributor>
+          <dc:contributor>English Heritage</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>text/csv</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000140</identifier>
+        <datestamp>2020-10-10T04:16:09Z</datestamp>
+        <setSpec>MQKK</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Identification and quantification of archaeological projects arising from aggregates extraction in Greater London</dc:title>
+          <dc:creator>Museum Of London Archaeology</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 2009</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>ads collection id:1034</dc:identifier>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>London</dc:subject>
+          <dc:description>The project aimed to identify and quantify past archaeological investigations arising from hard and soft aggregates extraction in Greater London, which currently have incomplete or inappropriately low levels of dissemination. The study provides a basis for a future strategy to improve and widen public dissemination of the results of such investigations, including the deposition of data into a publicly accessible research archive.</dc:description>
+          <dc:contributor>Museum Of London Archaeology</dc:contributor>
+          <dc:contributor>Aggregates Levy Sustainability Fund</dc:contributor>
+          <dc:contributor>English Heritage</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>text/csv</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000146</identifier>
+        <datestamp>2020-07-28T04:24:14Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Home Farm, Harmondsworth Lane, Sipson, London borough of Hillingdon</dc:title>
+          <dc:creator>Museum Of London Archaeology</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 1999/2002</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>ads collection id:1035</dc:identifier>
+          <dc:subject>Animal Bone</dc:subject>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>BOUNDARY DITCH</dc:subject>
+          <dc:subject>CERAMIC</dc:subject>
+          <dc:subject>COOKING PIT</dc:subject>
+          <dc:subject>CREMATION</dc:subject>
+          <dc:subject>DITCHED ENCLOSURE</dc:subject>
+          <dc:subject>Human Bone</dc:subject>
+          <dc:subject>LINEAR FEATURE</dc:subject>
+          <dc:subject>LITHIC IMPLEMENT</dc:subject>
+          <dc:subject>POST HOLE</dc:subject>
+          <dc:subject>QUERN</dc:subject>
+          <dc:subject>RUBBISH PIT</dc:subject>
+          <dc:subject>SETTLEMENT</dc:subject>
+          <dc:subject>STAKE HOLE</dc:subject>
+          <dc:subject>Sunken Featured Building</dc:subject>
+          <dc:subject>WELL</dc:subject>
+          <dc:description>Archaeological excavations/watching briefs were undertaken by Museum of London Archaeology in phases between 1999 and 2002, on the site of Home Farm, Harmondsworth. The watching brief was commissioned by SITA in response to an application to extract gravel.</dc:description>
+          <dc:contributor>Museum Of London Archaeology</dc:contributor>
+          <dc:contributor>Aggregates Levy Sustainability Fund</dc:contributor>
+          <dc:contributor>English Heritage</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000146</identifier>
+        <datestamp>2020-10-10T04:16:09Z</datestamp>
+        <setSpec>MQKK</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Home Farm, Harmondsworth Lane, Sipson, London borough of Hillingdon</dc:title>
+          <dc:creator>Museum Of London Archaeology</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 1999/2002</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>ads collection id:1035</dc:identifier>
+          <dc:subject>Animal Bone</dc:subject>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>BOUNDARY DITCH</dc:subject>
+          <dc:subject>CERAMIC</dc:subject>
+          <dc:subject>COOKING PIT</dc:subject>
+          <dc:subject>CREMATION</dc:subject>
+          <dc:subject>DITCHED ENCLOSURE</dc:subject>
+          <dc:subject>Human Bone</dc:subject>
+          <dc:subject>LINEAR FEATURE</dc:subject>
+          <dc:subject>LITHIC IMPLEMENT</dc:subject>
+          <dc:subject>POST HOLE</dc:subject>
+          <dc:subject>QUERN</dc:subject>
+          <dc:subject>RUBBISH PIT</dc:subject>
+          <dc:subject>SETTLEMENT</dc:subject>
+          <dc:subject>STAKE HOLE</dc:subject>
+          <dc:subject>Sunken Featured Building</dc:subject>
+          <dc:subject>WELL</dc:subject>
+          <dc:description>Archaeological excavations/watching briefs were undertaken by Museum of London Archaeology in phases between 1999 and 2002, on the site of Home Farm, Harmondsworth. The watching brief was commissioned by SITA in response to an application to extract gravel.</dc:description>
+          <dc:contributor>Museum Of London Archaeology</dc:contributor>
+          <dc:contributor>Aggregates Levy Sustainability Fund</dc:contributor>
+          <dc:contributor>English Heritage</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000144</identifier>
+        <datestamp>2020-07-28T04:24:14Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>England's Historic Seascapes: Demonstrating the Method</dc:title>
+          <dc:creator>SeaZone Solutions Limited</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 2009/2011</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>ads collection id:1036</dc:identifier>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>HISTORIC SEASCAPE CHARACTERISATION</dc:subject>
+          <dc:subject>MARITIME</dc:subject>
+          <dc:description>The HSC: Demonstrating the Method Project, funded by the ALSF, marks the initial implementation of a rigorous, repeatable methodology for Historic Seascape Characterisation, applying the principles already underpinning Historic Landscape Characterisation (HLC) to the coastal and marine zones.</dc:description>
+          <dc:contributor>English Heritage</dc:contributor>
+          <dc:contributor>Aggregates Levy Sustainability Fund</dc:contributor>
+          <dc:contributor>SeaZone Solutions Limited</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000144</identifier>
+        <datestamp>2020-10-10T04:16:10Z</datestamp>
+        <setSpec>MQKK</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>England's Historic Seascapes: Demonstrating the Method</dc:title>
+          <dc:creator>SeaZone Solutions Limited</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 2009/2011</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>ads collection id:1036</dc:identifier>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>HISTORIC SEASCAPE CHARACTERISATION</dc:subject>
+          <dc:subject>MARITIME</dc:subject>
+          <dc:description>The HSC: Demonstrating the Method Project, funded by the ALSF, marks the initial implementation of a rigorous, repeatable methodology for Historic Seascape Characterisation, applying the principles already underpinning Historic Landscape Characterisation (HLC) to the coastal and marine zones.</dc:description>
+          <dc:contributor>English Heritage</dc:contributor>
+          <dc:contributor>Aggregates Levy Sustainability Fund</dc:contributor>
+          <dc:contributor>SeaZone Solutions Limited</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000181</identifier>
+        <datestamp>2020-07-28T04:24:14Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>A Database of Upper Palaeolithic Sites based on Wymer and Bonsall, 1977</dc:title>
+          <dc:creator>Whyte, Charles</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 2010</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>ads collection id:1020</dc:identifier>
+          <dc:subject>Animal Bone</dc:subject>
+          <dc:subject>Antler</dc:subject>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>LITHIC IMPLEMENT</dc:subject>
+          <dc:subject>TOOLS AND EQUIPMENT</dc:subject>
+          <dc:description>This database consists of data for all the Upper Palaeolithic (Earlier and Later) sites with positional data in England and Wales derived from the Gazetteer of Mesolithic sites in England and Wales (Wymer and Bonsall, 1977), issued as Council for British Archaeology Research Report 20, along with a Gazetteer of Upper Palaeolithic sites. The database includes a list of mistakes (and corrections) noted while checking the gazetteer.</dc:description>
+          <dc:contributor>Council For British Archaeology</dc:contributor>
+          <dc:contributor>Whyte, Charles</dc:contributor>
+          <dc:contributor>Wymer, John</dc:contributor>
+          <dc:contributor>Bonsall, Clive</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>text/csv</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000181</identifier>
+        <datestamp>2020-11-17T05:20:38Z</datestamp>
+        <setSpec>MQKK</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>A Database of Upper Palaeolithic Sites based on Wymer and Bonsall, 1977</dc:title>
+          <dc:creator>Whyte, Charles</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 2010</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:subject>Animal Bone</dc:subject>
+          <dc:subject>Antler</dc:subject>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>LITHIC IMPLEMENT</dc:subject>
+          <dc:subject>TOOLS AND EQUIPMENT</dc:subject>
+          <dc:description>This database consists of data for all the Upper Palaeolithic (Earlier and Later) sites with positional data in England and Wales derived from the Gazetteer of Mesolithic sites in England and Wales (Wymer and Bonsall, 1977), issued as Council for British Archaeology Research Report 20, along with a Gazetteer of Upper Palaeolithic sites. The database includes a list of mistakes (and corrections) noted while checking the gazetteer.</dc:description>
+          <dc:contributor>Council For British Archaeology</dc:contributor>
+          <dc:contributor>Whyte, Charles</dc:contributor>
+          <dc:contributor>Wymer, John</dc:contributor>
+          <dc:contributor>Bonsall, Clive</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>text/csv</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000134</identifier>
+        <datestamp>2020-07-28T04:24:14Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>The Augustinian Priory of St Mary, Norton Priory, Runcorn, Cheshire</dc:title>
+          <dc:creator>Oxford Archaeology (North)</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 2000/2005</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>ads collection id:1037</dc:identifier>
+          <dc:subject>ABBEY</dc:subject>
+          <dc:subject>AUGUSTINIAN MONASTERY</dc:subject>
+          <dc:subject>Animal Bone</dc:subject>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>CERAMIC</dc:subject>
+          <dc:subject>COIN</dc:subject>
+          <dc:subject>HOUSE</dc:subject>
+          <dc:subject>Human Bone</dc:subject>
+          <dc:subject>MONASTERY</dc:subject>
+          <dc:subject>NAIL</dc:subject>
+          <dc:subject>PRIORY</dc:subject>
+          <dc:subject>SHOE</dc:subject>
+          <dc:subject>VESSEL</dc:subject>
+          <dc:description>The dataset comprises detailed records (in the form of databases) of stratigraphic data generated by the excavations, and the substantial parts of the material archive, including the medieval and later vessel glass, the medieval and later pottery, the medieval and later metalwork (copper alloy, iron, and lead objects), the bone and ivory objects, the wooden and leather objects of medieval and later date. Other elements of the material archive, for instance the medieval floor tiles and the medieval stonework, are described in full in the 2008 publication.  The dataset also includes a detailed catalogue of the skeletal evidence, complementing the more discursive account given in the publication.</dc:description>
+          <dc:contributor>Oxford Archaeology (North)</dc:contributor>
+          <dc:contributor>Trust, Norton Priory Museum</dc:contributor>
+          <dc:contributor>English Heritage</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>text/csv</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5284/1000134</identifier>
+        <datestamp>2020-09-23T08:25:13Z</datestamp>
+        <setSpec>MQKK</setSpec>
+        <setSpec>BL.ADS</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>The Augustinian Priory of St Mary, Norton Priory, Runcorn, Cheshire</dc:title>
+          <dc:creator>Oxford Archaeology (North)</dc:creator>
+          <dc:publisher>Archaeology Data Service</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 2000/2005</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>ads collection id:1037</dc:identifier>
+          <dc:subject>ABBEY</dc:subject>
+          <dc:subject>AUGUSTINIAN MONASTERY</dc:subject>
+          <dc:subject>Animal Bone</dc:subject>
+          <dc:subject>Archaeology</dc:subject>
+          <dc:subject>CERAMIC</dc:subject>
+          <dc:subject>COIN</dc:subject>
+          <dc:subject>HOUSE</dc:subject>
+          <dc:subject>Human Bone</dc:subject>
+          <dc:subject>MONASTERY</dc:subject>
+          <dc:subject>NAIL</dc:subject>
+          <dc:subject>PRIORY</dc:subject>
+          <dc:subject>SHOE</dc:subject>
+          <dc:subject>VESSEL</dc:subject>
+          <dc:description>The dataset comprises detailed records (in the form of databases) of stratigraphic data generated by the excavations, and the substantial parts of the material archive, including the medieval and later vessel glass, the medieval and later pottery, the medieval and later metalwork (copper alloy, iron, and lead objects), the bone and ivory objects, the wooden and leather objects of medieval and later date. Other elements of the material archive, for instance the medieval floor tiles and the medieval stonework, are described in full in the 2008 publication.  The dataset also includes a detailed catalogue of the skeletal evidence, complementing the more discursive account given in the publication.</dc:description>
+          <dc:contributor>Oxford Archaeology (North)</dc:contributor>
+          <dc:contributor>Trust, Norton Priory Museum</dc:contributor>
+          <dc:contributor>English Heritage</dc:contributor>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Archive</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>text/csv</dc:format>
+          <dc:rights>ADS Terms and Conditions apply to reuse</dc:rights>
+          <dc:rights>http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5291/ill-data.6-05-579</identifier>
+        <datestamp>2020-08-02T09:44:33Z</datestamp>
+        <setSpec>INIST</setSpec>
+        <setSpec>INIST.ILL</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Coherent excitations in phosphate glasses</dc:title>
+          <dc:creator>Fontana, Aldo</dc:creator>
+          <dc:creator>Fabiani, Elisa</dc:creator>
+          <dc:creator>Baldi, Giacomo</dc:creator>
+          <dc:creator>Schober, Helmut</dc:creator>
+          <dc:creator>Stride, John</dc:creator>
+          <dc:publisher>Institut Laue-Langevin</dc:publisher>
+          <dc:date>2004</dc:date>
+          <dc:date>Issued: 2004</dc:date>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5291/ill-data.6-05-579</identifier>
+        <datestamp>2020-09-23T08:25:13Z</datestamp>
+        <setSpec>GOGV</setSpec>
+        <setSpec>INIST.ILL</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Coherent excitations in phosphate glasses</dc:title>
+          <dc:creator>Fontana, Aldo</dc:creator>
+          <dc:creator>Fabiani, Elisa</dc:creator>
+          <dc:creator>Baldi, Giacomo</dc:creator>
+          <dc:creator>Schober, Helmut</dc:creator>
+          <dc:creator>Stride, John</dc:creator>
+          <dc:publisher>Institut Laue-Langevin</dc:publisher>
+          <dc:date>2004</dc:date>
+          <dc:date>Issued: 2004</dc:date>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5442/d0001</identifier>
+        <datestamp>2020-07-23T07:01:43Z</datestamp>
+        <setSpec>TIB</setSpec>
+        <setSpec>TIB.HZB</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Electrochemical and Photochemical Functionalization of Au and Si Surfaces by Grafting of Diazonium and Azide Compounds</dc:title>
+          <dc:creator>Zhang, Xin</dc:creator>
+          <dc:publisher>Helmholtz-Zentrum Berlin für Materialien und Energy</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>issn:1868-5781</dc:identifier>
+          <dc:subject>Chemistry</dc:subject>
+          <dc:subject>541 Physical &amp;amp; theoretical chemistry</dc:subject>
+          <dc:language>en</dc:language>
+          <dc:format>text/plain</dc:format>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5442/d0001</identifier>
+        <datestamp>2020-09-23T08:25:13Z</datestamp>
+        <setSpec>DXDT</setSpec>
+        <setSpec>TIB.HZB</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Electrochemical and Photochemical Functionalization of Au and Si Surfaces by Grafting of Diazonium and Azide Compounds</dc:title>
+          <dc:creator>Zhang, Xin</dc:creator>
+          <dc:publisher>Helmholtz-Zentrum Berlin für Materialien und Energy</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>issn:1868-5781</dc:identifier>
+          <dc:subject>Chemistry</dc:subject>
+          <dc:subject>541 Physical &amp;amp; theoretical chemistry</dc:subject>
+          <dc:language>en</dc:language>
+          <dc:format>text/plain</dc:format>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5291/ill-data.6-05-589</identifier>
+        <datestamp>2017-01-16T15:28:14Z</datestamp>
+        <setSpec>INIST</setSpec>
+        <setSpec>INIST.ILL</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5291/ill-data.6-05-589</identifier>
+        <datestamp>2017-01-16T15:28:14Z</datestamp>
+        <setSpec>GOGV</setSpec>
+        <setSpec>INIST.ILL</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5291/ill-data.7-02-110</identifier>
+        <datestamp>2017-01-16T15:28:14Z</datestamp>
+        <setSpec>INIST</setSpec>
+        <setSpec>INIST.ILL</setSpec>
+      </header>
+    </record>
+    <record>
+      <header status="deleted">
+        <identifier>doi:10.5291/ill-data.7-02-110</identifier>
+        <datestamp>2017-01-16T15:28:14Z</datestamp>
+        <setSpec>GOGV</setSpec>
+        <setSpec>INIST.ILL</setSpec>
+      </header>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5287/bodleianh8x3.2</identifier>
+        <datestamp>2020-07-28T04:24:14Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.OXDB</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>2008 Tick1 Audio Corpus</dc:title>
+          <dc:creator>Kochanski, Gregory</dc:creator>
+          <dc:publisher>University of Oxford</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Dataset</dc:type>
+          <dc:rights>Licensed in England under
+the Creative Commons Noncommercial-Attribution License.
+Details may be found at http://creativecommons.org/licenses/by-nc/2.0/uk/legalcode .
+You may copy and/or use this file (and referenced files) for noncommercial
+purposes so long as the author is properly acknowledged.
+For commercial licensing, contact Isis Innovation,
+http://www.isis-innovation.com/ .</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5287/bodleianh8x3.2</identifier>
+        <datestamp>2020-09-23T08:25:14Z</datestamp>
+        <setSpec>YLYL</setSpec>
+        <setSpec>BL.OXDB</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>2008 Tick1 Audio Corpus</dc:title>
+          <dc:creator>Kochanski, Gregory</dc:creator>
+          <dc:publisher>University of Oxford</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Dataset</dc:type>
+          <dc:rights>Licensed in England under
+the Creative Commons Noncommercial-Attribution License.
+Details may be found at http://creativecommons.org/licenses/by-nc/2.0/uk/legalcode .
+You may copy and/or use this file (and referenced files) for noncommercial
+purposes so long as the author is properly acknowledged.
+For commercial licensing, contact Isis Innovation,
+http://www.isis-innovation.com/ .</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5285/e8f43a51-0198-4323-a926-fe69225d57dd</identifier>
+        <datestamp>2020-07-28T04:24:15Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.NERC</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>GBS 20.7GHz slant path radio propagation measurements, Sparsholt site</dc:title>
+          <dc:creator>Science And Technology Facilities Council (STFC), Chilbolton Facility For Atmospheric And Radio Research, [Callaghan, S. A., J. Waight, C. J. Walden, J. Agnew And S. Ventouras]. </dc:creator>
+          <dc:publisher>NERC British Atmospheric Data Centre</dc:publisher>
+          <dc:date>2009</dc:date>
+          <dc:date>Updated: 2011-04-01</dc:date>
+          <dc:date>Created: 2007-09-20</dc:date>
+          <dc:date>Available: 2009-12-10</dc:date>
+          <dc:date>Issued: 2009</dc:date>
+          <dc:relation>urn:http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dpt_11902117773321177</dc:relation>
+          <dc:relation>urn:http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__activity_activity_chobs</dc:relation>
+          <dc:relation>urn:http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__obs_11902941857921445</dc:relation>
+          <dc:subject>Atmosperic sciences and Earth Observation Imagery</dc:subject>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Metadata document</dc:type>
+          <dc:rights>The format is open</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5285/e8f43a51-0198-4323-a926-fe69225d57dd</identifier>
+        <datestamp>2020-09-23T08:25:14Z</datestamp>
+        <setSpec>RCKQ</setSpec>
+        <setSpec>BL.NERC</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>GBS 20.7GHz slant path radio propagation measurements, Sparsholt site</dc:title>
+          <dc:creator>Science And Technology Facilities Council (STFC), Chilbolton Facility For Atmospheric And Radio Research, [Callaghan, S. A., J. Waight, C. J. Walden, J. Agnew And S. Ventouras]. </dc:creator>
+          <dc:publisher>NERC British Atmospheric Data Centre</dc:publisher>
+          <dc:date>2009</dc:date>
+          <dc:date>Updated: 2011-04-01</dc:date>
+          <dc:date>Created: 2007-09-20</dc:date>
+          <dc:date>Available: 2009-12-10</dc:date>
+          <dc:date>Issued: 2009</dc:date>
+          <dc:relation>urn:http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dpt_11902117773321177</dc:relation>
+          <dc:relation>urn:http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__activity_activity_chobs</dc:relation>
+          <dc:relation>urn:http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__obs_11902941857921445</dc:relation>
+          <dc:subject>Atmosperic sciences and Earth Observation Imagery</dc:subject>
+          <dc:language>en</dc:language>
+          <dc:type>Dataset</dc:type>
+          <dc:type>Metadata document</dc:type>
+          <dc:rights>The format is open</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5287/bodleianfdk5.3</identifier>
+        <datestamp>2016-02-09T13:17:52Z</datestamp>
+        <setSpec>BL</setSpec>
+        <setSpec>BL.OXDB</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Mostyn Brown Thesis 2009</dc:title>
+          <dc:creator>Brown, Mostyn</dc:creator>
+          <dc:publisher>Bodleian Libraries, University of Oxford</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 2011-02-24</dc:date>
+          <dc:date>Updated: 2011-03-31</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>doi:10.5287/bodleianfdk5.3</dc:identifier>
+          <dc:identifier>publisher identifier:MostynBrown</dc:identifier>
+          <dc:description>This dataset is a part of the project work referenced by the thesis titled CONTROL OF THE UNIDIRECTIONAL MOTOR IN RHODOBACTER SPHAEROIDES by Mostyn T. Brown submitted in partial fulfillment of the requirements for the degree of Doctor of Philosophy at the University of OxfordThe datset contains the following:    * The LATEX files including the style file and figures used to compile the thesis    * Videos    * Protocols used    * Bead Rotation Data divided into the following sections       (1) Wild-type Bead Rotation Data,       (2) JPA1353 Bead Rotation Data,       (3) Flow Cell Bead Data, and       (4) Analysis Programs</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>doi:10.5287/bodleianfdk5.3</identifier>
+        <datestamp>2016-02-09T13:17:52Z</datestamp>
+        <setSpec>YLYL</setSpec>
+        <setSpec>BL.OXDB</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Mostyn Brown Thesis 2009</dc:title>
+          <dc:creator>Brown, Mostyn</dc:creator>
+          <dc:publisher>Bodleian Libraries, University of Oxford</dc:publisher>
+          <dc:date>2011</dc:date>
+          <dc:date>Created: 2011-02-24</dc:date>
+          <dc:date>Updated: 2011-03-31</dc:date>
+          <dc:date>Issued: 2011</dc:date>
+          <dc:identifier>doi:10.5287/bodleianfdk5.3</dc:identifier>
+          <dc:identifier>publisher identifier:MostynBrown</dc:identifier>
+          <dc:description>This dataset is a part of the project work referenced by the thesis titled CONTROL OF THE UNIDIRECTIONAL MOTOR IN RHODOBACTER SPHAEROIDES by Mostyn T. Brown submitted in partial fulfillment of the requirements for the degree of Doctor of Philosophy at the University of OxfordThe datset contains the following:    * The LATEX files including the style file and figures used to compile the thesis    * Videos    * Protocols used    * Bead Rotation Data divided into the following sections       (1) Wild-type Bead Rotation Data,       (2) JPA1353 Bead Rotation Data,       (3) Flow Cell Bead Data, and       (4) Analysis Programs</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <resumptionToken completeListSize="35047773">metadataPrefix%3Doai_dc%26paging_cursor%3DMTMwMTY3MDAzNzAwMCwxMC41Mjg3L2JvZGxlaWFuZmRrNS4z%26cursor%3D1</resumptionToken>
+  </ListRecords>
+</OAI-PMH>
