@@ -12,7 +12,9 @@ def each_record(record):
 
 
 def each_element(element):
-    return dict({element.tag: element.xpath("normalize-space(.)")})
+    return dict(
+        {element.tag: (element.xpath("normalize-space(.)"), dict(element.attrib))}
+    )
 
 
 def main(argv=None):
