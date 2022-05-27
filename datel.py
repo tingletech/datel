@@ -26,9 +26,22 @@ def main(argv=None):
         argv = parser.parse_args()
 
     tree = ET.parse(argv.xml).getroot()
-    records = tree.xpath(argv.xpath)
+
+    try:
+        records = tree.xpath(argv.xpath)
+    except ET.XPathEvalError as e:
+        raise ValueError(
+            f'{e} "{argv.xpath}" in user supplied XPath 1.0 see https://www.w3.org/TR/xpath-10/'
+        )
+
     for record in records:
         print(json.dumps(each_record(record)))
+
+    if len(records) == 0:
+        print(
+            f'WARNING: the supplied xpath "{argv.xpath}" found 0 results in {argv.xml}',
+            file=sys.stderr,
+        )
 
 
 # main() idiom for importing into REPL for debugging
