@@ -5,6 +5,19 @@ import argparse
 import sys
 import json
 import xml.etree.ElementTree as ET
+from typing import Iterator
+
+
+def datel(element: ET.Element, xpath: str) -> Iterator[dict]:
+    """
+    Convert XML to JSON.
+
+    Takes an element, and an XPath sring pointing to the records.
+
+    Returns an Iterator of records in datel data element format
+    """
+    for record in element.findall(xpath):
+        yield each_record(record)
 
 
 def each_record(record):
@@ -12,9 +25,32 @@ def each_record(record):
 
 
 def each_element(element):
-    return dict(
-        {element.tag: [element.text, dict(element.attrib)]}
-    )
+    """
+    Datel Data Element
+
+    Goal: represent an XML element as a python data structure suitable for converting to JSON.
+
+    The XML element is converted to a dict with a single key.
+
+    The key is the XML element's tag name in James Clark notation.
+
+    The value of the key is an array of two array elements.
+
+    The first array element is the text of the XML element.
+
+    The second array element is a dict of the attributes of the XML element.
+
+    The whole thing is a datel data element.
+    """
+    return dict({element.tag: [normalize_space(element), dict(element.attrib)]})
+
+
+def normalize_space(element):
+    return " ".join(element.text.split())
+
+
+def munge_xpath(string):
+    return "".join((".", string.lstrip(".")))
 
 
 def main(argv=None):
@@ -26,13 +62,14 @@ def main(argv=None):
         argv = parser.parse_args()
 
     tree = ET.parse(argv.xml).getroot()
+    records = datel(tree, munge_xpath(argv.xpath))
 
-    records = tree.findall(argv.xpath)
-
+    had_output = False
     for record in records:
-        print(json.dumps(each_record(record)))
+        had_output = True
+        print(json.dumps(record))
 
-    if len(records) == 0:
+    if not (had_output):
         print(
             f'WARNING: the supplied xpath "{argv.xpath}" found 0 results in {argv.xml}',
             file=sys.stderr,
