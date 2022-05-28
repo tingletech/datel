@@ -4,16 +4,16 @@
 import argparse
 import sys
 import json
-from lxml import etree as ET
+import xml.etree.ElementTree as ET
 
 
 def each_record(record):
-    return [each_element(element) for element in record.xpath(".//*[text()]")]
+    return [each_element(element) for element in record.findall(".//*")]
 
 
 def each_element(element):
     return dict(
-        {element.tag: (element.xpath("normalize-space(.)"), dict(element.attrib))}
+        {element.tag: [element.text, dict(element.attrib)]}
     )
 
 
@@ -27,12 +27,7 @@ def main(argv=None):
 
     tree = ET.parse(argv.xml).getroot()
 
-    try:
-        records = tree.xpath(argv.xpath)
-    except ET.XPathEvalError as e:
-        raise ValueError(
-            f'{e} "{argv.xpath}" in user supplied XPath 1.0 see https://www.w3.org/TR/xpath-10/'
-        )
+    records = tree.findall(argv.xpath)
 
     for record in records:
         print(json.dumps(each_record(record)))
