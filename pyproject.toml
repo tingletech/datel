@@ -1,0 +1,7 @@
+[project]
+name = "Datel"
+version = "1.0"
+readme = "README.md"
+
+[project.scripts]
+datel = "datel:main"
