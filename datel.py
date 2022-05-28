@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
+"""Datel XML to JSONL Converter
+"""
 
 import argparse
-import sys
 import json
+import sys
 import xml.etree.ElementTree as ET
 from typing import Iterator
 
@@ -14,17 +15,19 @@ def datel(element: ET.Element, xpath: str) -> Iterator[dict]:
 
     Takes an element, and an XPath sring pointing to the records.
 
-    Returns an Iterator of records in datel data element format
+    Returns an Iterator of Datel Records matching the XPath in the XML
     """
     for record in element.findall(xpath):
-        yield each_record(record)
+        yield datel_record(record)
 
 
-def each_record(record):
-    return [each_element(element) for element in record.findall(".//*")]
+def datel_record(record):
+    """A Datel Record is an array Datel Data Elements
+    """
+    return [datel_element(element) for element in record.findall(".//*")]
 
 
-def each_element(element):
+def datel_element(element):
     """
     Datel Data Element
 
@@ -32,7 +35,7 @@ def each_element(element):
 
     The XML element is converted to a dict with a single key.
 
-    The key is the XML element's tag name in James Clark notation.
+    The key is the XML element's tag name with namespaces in James Clark notation.
 
     The value of the key is an array of two array elements.
 
@@ -54,9 +57,11 @@ def munge_xpath(string):
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="create json data elements from xml")
+    parser = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
     parser.add_argument("xml", help="source xml file")
-    parser.add_argument("xpath", help="xpath to a record")
+    parser.add_argument("xpath", help="xpath to a record (one line pre record in the output)")
 
     if argv is None:
         argv = parser.parse_args()
