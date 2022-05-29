@@ -1,34 +1,25 @@
-from datel import datel
+import datel
 import xml.etree.ElementTree as ET
 
 root = ET.fromstring("<root><record>RR<title a='2'></title></record>j</root>")
 
-got1 = list(datel(root))
+got1 = list(datel.datel_record_set(root))
 expected1 = [
     [
         {"root": ['<record>RR<title a="2" /></record>j', {}]},
         {"record": ['RR<title a="2" />', {}]},
         {"title": ["", {"a": "2"}]},
-        {"@_datel_record_@": "root"},
     ]
 ]
 
-got2 = list(datel(root, "record", {"text_nodes": True}))
-expected2 = [
-    [
-        "RR",
-        {"record": ['RR<title a="2" />', {}]},
-        "j",
-        {"title": ["", {"a": "2"}]},
-        {"@_datel_record_@": "record"},
-    ]
-]
 
-if got1 == expected1 and got2 == expected2:
-    print("it worked")
-else:
-    print(got1)
-    print(got2)
+got2 = list(datel.datel_record_set(root, "record"))
+expected2 = [[{"record": ['RR<title a="2" />', {}]}, {"title": ["", {"a": "2"}]}]]
+
+test1 = bool(got1 == expected1)
+test2 = bool(got2 == expected2)
+
+if False in (test1, test2):
     exit(1)
-
-exit(1)
+else:
+    print("looks good")

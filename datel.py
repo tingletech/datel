@@ -6,11 +6,12 @@ import argparse
 import json
 import sys
 import xml.etree.ElementTree as ET
-from typing import Iterator, List, Optional
+from typing import Iterator, List
 
 
-def datel(
-    element: ET.Element, xpath: str = ".", options: dict = {}
+def datel_record_set(
+    element: ET.Element,
+    xpath: str = ".",
 ) -> Iterator[object]:
     """
     Takes an element, and an XPath expression pointing to the records.
@@ -18,48 +19,23 @@ def datel(
     Returns an Iterator of Datel Records matching the XPath in the XML
     """
     for record in element.findall(xpath):
-        yield datel_record(record, options)
+        yield datel_record(record)
 
 
-def datel_record(record: ET.Element, options: dict) -> List[object]:
+def datel_record(
+    record: ET.Element,
+) -> List[object]:
     """A Datel Record is an array Datel Data Elements.
 
     A Datel Record is in the same order as the XML source, but the
     hierarchy is flattened.
 
-    The last element of a Datel Record's array is a dict of any
-    attributes of the record XML element.  The record XML element's
-    tag is recorded with the key `@_datel_record_@` in the attributes
-    dict.  This name would be illegal in an XML attribute, so won't be
-    in the source XML.
-
-    Text nodes will be intermixed with Data Data Elements as strings
-    in the Datel record array if `options = {text_nodes: True}`.
-
     ```
     <r><b>B</b></r>
-    [{"b": ["B", {}]}, {"@_datel_record_@": "r"}]
+    [{'r': ['<b>B</b>', {}]}, {'b': ['B', {}]}]
     ```
     """
-    this_record = []
-    text = normalize_space(record.text)  # rare leading text node of the record
-    if text[1] and options.get("text_nodes", False):
-        this_record.append(text[0])
-
-    for element in record.iter():
-        this_record.append(datel_element(element))  # the normal case
-        if options.get("text_nodes", False):
-            tail = normalize_space(element.tail)  # rarer child text nodes
-            if tail[1]:
-                this_record.append(tail[0])
-
-    attributes = {}
-    if record.attrib:  # also probably not too common?
-        attributes = record.attrib
-
-    attributes["@_datel_record_@"] = record.tag  # note the record's tag
-    this_record.append(attributes)
-    return this_record
+    return [datel_element(element) for element in record.iter()]
 
 
 def datel_element(element: ET.Element) -> dict:
@@ -98,19 +74,6 @@ def innerxml(element: ET.Element) -> str:
     )
 
 
-def normalize_space(string: Optional[str]) -> List[object]:
-    """sort of like XPath normalize-space()
-    returns [ string, bool ]
-    """
-    has_content = True
-    text = ""
-    if not isinstance(string, str) or string == "":
-        has_content = False  # so as to use in `if` tests
-    else:
-        text = " ".join(string.split())
-    return [text, has_content]
-
-
 def main(argv=None):
     parser = argparse.ArgumentParser(
         description=__doc__,
@@ -126,17 +89,12 @@ def main(argv=None):
         nargs="?",
         default=".",
     )
-    parser.add_argument(
-        "--text-nodes",
-        action="store_true",
-        help="mix text nodes into record array",
-    )
 
     if argv is None:
         argv = parser.parse_args()
 
     tree = ET.parse(argv.xml).getroot()
-    records = datel(tree, argv.xpath, {"text_nodes": argv.text_nodes})
+    records = datel_record_set(tree, argv.xpath)
 
     had_output = False
     for record in records:

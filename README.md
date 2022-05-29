@@ -14,9 +14,7 @@ The first step is to apply the XPath to the XML Document, iterating
 over each record.
 
 For each record, the next step is to iterate over each record node,
-creating an array for each record containing Datel Date Elements
-(if the `--text-nodes` option is used, direct children of the matched
-XPath node will be incuded in the array).
+creating an array for each record containing Datel Date Elements.
 
 The command outputs the XML as JSON Lines of Datel Records.
 
