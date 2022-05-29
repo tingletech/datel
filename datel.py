@@ -6,10 +6,10 @@ import argparse
 import json
 import sys
 import xml.etree.ElementTree as ET
-from typing import Iterator
+from typing import Iterator, List, Optional
 
 
-def datel(element: ET.Element, xpath: str, options: dict) -> Iterator[dict]:
+def datel(element: ET.Element, xpath: str, options: dict) -> Iterator[object]:
     """
     Takes an element, and an XPath expression pointing to the records.
 
@@ -19,7 +19,7 @@ def datel(element: ET.Element, xpath: str, options: dict) -> Iterator[dict]:
         yield datel_record(record, options)
 
 
-def datel_record(record, options):
+def datel_record(record: ET.Element, options: dict) -> List[object]:
     """A Datel Record is an array Datel Data Elements.
 
     A Datel Record is in the same order as the XML source, but the
@@ -40,27 +40,27 @@ def datel_record(record, options):
     ```
     """
     this_record = []
-    text = normalize_space(record.text)  # this is rare leading text node of the record
-    if text and options.get("text_nodes", False):
-        this_record.append(text)
+    text = normalize_space(record.text)  # rare leading text node of the record
+    if text[1] and options.get("text_nodes", False):
+        this_record.append(text[0])
 
-    for element in record.findall(".//*"):
+    for element in record.iter():
         this_record.append(datel_element(element))  # the normal case
         if options.get("text_nodes", False):
-            tail = normalize_space(element.tail)  # yet more rare child text nodes
-            if tail:
-                this_record.append(tail)
+            tail = normalize_space(element.tail)  # rarer child text nodes
+            if tail[1]:
+                this_record.append(tail[0])
 
     attributes = {}
     if record.attrib:  # also probably not too common?
         attributes = record.attrib
 
-    attributes["@_datel_record_@"] = record.tag  # might as well note the record's tag
+    attributes["@_datel_record_@"] = record.tag  # note the record's tag
     this_record.append(attributes)
     return this_record
 
 
-def datel_element(element):
+def datel_element(element: ET.Element):
     """
     Datel Data Element
 
@@ -82,22 +82,31 @@ def datel_element(element):
     <tag attribute="value">string of <inner>content</inner></tag>
     {"tag": ["string of <inner>content</inner>", {"attribute": "value"}]}
     ```
-    """
+    """  # noqa
     return dict({element.tag: [innerxml(element), dict(element.attrib)]})
 
 
-def innerxml(element):
+def innerxml(element: ET.Element) -> str:
     """like .innerHTML in javascript"""
     return "".join(
-        (element.text or "", "".join(ET.tostring(e, "unicode") for e in element))
+        (
+            element.text or "",
+            "".join(ET.tostring(e, "unicode") for e in element),
+        )
     )
 
 
-def normalize_space(string: str) -> str:
-    """sort of like XPath normalize-space(), returns a string or False"""
+def normalize_space(string: Optional[str]) -> List[object]:
+    """sort of like XPath normalize-space()
+    returns [ string, bool ]
+    """
+    has_content = True
+    text = ""
     if not isinstance(string, str) or string == "":
-        return False  # so as to use in `if` tests
-    return " ".join(string.split())
+        has_content = False  # so as to use in `if` tests
+    else:
+        text = " ".join(string.split())
+    return [text, has_content]
 
 
 def main(argv=None):
@@ -134,7 +143,7 @@ def main(argv=None):
 
     if not had_output:
         print(
-            f'WARNING: the supplied xpath "{argv.xpath}" found 0 results in {argv.xml}',
+            f'WARNING: xpath "{argv.xpath}" found 0 results in {argv.xml}',
             file=sys.stderr,
         )
 
