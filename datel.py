@@ -22,8 +22,7 @@ def datel(element: ET.Element, xpath: str) -> Iterator[dict]:
 
 
 def datel_record(record):
-    """A Datel Record is an array Datel Data Elements
-    """
+    """A Datel Record is an array Datel Data Elements"""
     return [datel_element(element) for element in record.findall(".//*")]
 
 
@@ -60,10 +59,13 @@ def munge_xpath(string):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter,
+        description=__doc__,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument("xml", help="source xml file")
-    parser.add_argument("xpath", help="xpath to a record (one line per record in the output)")
+    parser.add_argument(
+        "xpath", help="xpath to a record (one line per record in the output)"
+    )
 
     if argv is None:
         argv = parser.parse_args()
