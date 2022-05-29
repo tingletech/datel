@@ -9,7 +9,9 @@ import xml.etree.ElementTree as ET
 from typing import Iterator, List, Optional
 
 
-def datel(element: ET.Element, xpath: str, options: dict) -> Iterator[object]:
+def datel(
+    element: ET.Element, xpath: str = ".", options: dict = {}
+) -> Iterator[object]:
     """
     Takes an element, and an XPath expression pointing to the records.
 
@@ -60,7 +62,7 @@ def datel_record(record: ET.Element, options: dict) -> List[object]:
     return this_record
 
 
-def datel_element(element: ET.Element):
+def datel_element(element: ET.Element) -> dict:
     """
     Datel Data Element
 
