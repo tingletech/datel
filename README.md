@@ -22,3 +22,18 @@ For more notes:
 datel -h
 pydoc datel
 ```
+
+## XPath Support
+
+Python's built in support for XPath is sort of limited; reading the
+source for `xml/etree/ElementPath.py` we find a `# FIXME: replace with real parser!!!` 
+in the section on predicates, and only these "signatures" are picked up
+and convered to predicates (copied from comments in the python source below).
+
+```
+[@attribute] predicate
+[@attribute='value'] or [@attribute!='value']
+[tag]
+[.='value'] or [tag='value'] or [.!='value'] or [tag!='value']
+[index] or [last()] or [last()-index]
+```
