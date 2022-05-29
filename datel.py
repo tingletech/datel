@@ -53,10 +53,6 @@ def normalize_space(element):
     return " ".join(element.text.split())
 
 
-def munge_xpath(string):
-    return "".join((".", string.lstrip(".")))
-
-
 def main(argv=None):
     parser = argparse.ArgumentParser(
         description=__doc__,
@@ -71,7 +67,7 @@ def main(argv=None):
         argv = parser.parse_args()
 
     tree = ET.parse(argv.xml).getroot()
-    records = datel(tree, munge_xpath(argv.xpath))
+    records = datel(tree, argv.xpath)
 
     had_output = False
     for record in records:
