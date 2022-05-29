@@ -9,23 +9,18 @@ import xml.etree.ElementTree as ET
 from typing import Iterator
 
 
-def datel(element: ET.Element, xpath: str = ".") -> Iterator[dict]:
+def datel(element: ET.Element, xpath: str, options: dict) -> Iterator[dict]:
     """
     Takes an element, and an XPath expression pointing to the records.
 
     Returns an Iterator of Datel Records matching the XPath in the XML
     """
-    xpath = (
-        "." if not xpath else xpath
-    )  #  must be a better way to do default value with type hint?
-    #  https://stackoverflow.com/a/56467744
     for record in element.findall(xpath):
-        yield datel_record(record)
+        yield datel_record(record, options)
 
 
-def datel_record(record):
-    """A Datel Record is an array Datel Data Elements
-    and maybe some random text nodes mixed in.
+def datel_record(record, options):
+    """A Datel Record is an array Datel Data Elements.
 
     A Datel Record is in the same order as the XML source, but the
     hierarchy is flattened.
@@ -35,6 +30,10 @@ def datel_record(record):
     tag is recorded with the key `@_datel_record_@` in the attributes
     dict.  This name would be illegal in an XML attribute, so won't be
     in the source XML.
+
+    Text nodes will be intermixed with Data Data Elements as strings
+    in the Datel record array if `options = {text_nodes: True}`.
+
     ```
     <r><b>B</b></r>
     [{"b": ["B", {}]}, {"@_datel_record_@": "r"}]
@@ -42,14 +41,15 @@ def datel_record(record):
     """
     this_record = []
     text = normalize_space(record.text)  # this is rare leading text node of the record
-    if text:
+    if text and options.get("text_nodes", False):
         this_record.append(text)
 
     for element in record.findall(".//*"):
         this_record.append(datel_element(element))  # the normal case
-        tail = normalize_space(element.tail)  # yet more rare child text nodes
-        if tail:
-            this_record.append(tail)
+        if options.get("text_nodes", False):
+            tail = normalize_space(element.tail)  # yet more rare child text nodes
+            if tail:
+                this_record.append(tail)
 
     attributes = {}
     if record.attrib:  # also probably not too common?
@@ -87,14 +87,14 @@ def datel_element(element):
 
 
 def innerxml(element):
-    """ like .innerHTML in javascript """
+    """like .innerHTML in javascript"""
     return "".join(
         (element.text or "", "".join(ET.tostring(e, "unicode") for e in element))
     )
 
 
 def normalize_space(string: str) -> str:
-    """ sort of like XPath normalize-space(), returns a string or False """
+    """sort of like XPath normalize-space(), returns a string or False"""
     if not isinstance(string, str) or string == "":
         return False  # so as to use in `if` tests
     return " ".join(string.split())
@@ -105,18 +105,27 @@ def main(argv=None):
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    parser.add_argument("xml", help="source xml file")
+    parser.add_argument(
+        "xml",
+        help="source xml file",
+    )
     parser.add_argument(
         "xpath",
         help="xpath to a record (one line per record in the output)",
         nargs="?",
+        default=".",
+    )
+    parser.add_argument(
+        "--text-nodes",
+        action="store_true",
+        help="mix text nodes into record array",
     )
 
     if argv is None:
         argv = parser.parse_args()
 
     tree = ET.parse(argv.xml).getroot()
-    records = datel(tree, argv.xpath)
+    records = datel(tree, argv.xpath, {"text_nodes": argv.text_nodes})
 
     had_output = False
     for record in records:
