@@ -9,21 +9,44 @@ import xml.etree.ElementTree as ET
 from typing import Iterator
 
 
-def datel(element: ET.Element, xpath: str) -> Iterator[dict]:
+def datel(element: ET.Element, xpath: str = ".") -> Iterator[dict]:
     """
-    Convert XML to JSON.
+    Convert XML to JSON Lines.
 
-    Takes an element, and an XPath sring pointing to the records.
+    Takes an element, and an XPath expression pointing to the records.
 
     Returns an Iterator of Datel Records matching the XPath in the XML
     """
+    xpath = (
+        "." if not xpath else xpath
+    )  #  must be a better way to do default value with type hint?
+    #  https://stackoverflow.com/a/56467744
     for record in element.findall(xpath):
         yield datel_record(record)
 
 
 def datel_record(record):
-    """A Datel Record is an array Datel Data Elements"""
-    return [datel_element(element) for element in record.findall(".//*")]
+    """A Datel Record is an array Datel Data Elements
+    and maybe some random text nodes and attributes
+    (if you are [un]lucky)
+    """
+    datel_record = []
+    text = normalize_space(record.text)  # this is rare leading text node
+    if text:
+        datel_record.append(text)
+
+    for element in record.findall(".//*"):
+        datel_record.append(datel_element(element))  # the normal case
+        tail = normalize_space(element.tail)  # yet more rare child text nodes
+        if tail:
+            datel_record.append(tail)  # you own your children's tails
+
+    attributes = {}
+    if record.attrib:  # also probably not too common?
+        attributes = record.attrib
+    attributes["@_datel_@"] = record.tag
+    datel_record.append(attributes)
+    return datel_record
 
 
 def datel_element(element):
@@ -44,13 +67,21 @@ def datel_element(element):
 
     The whole thing is a datel data element.
     """
-    return dict({element.tag: [normalize_space(element), dict(element.attrib)]})
+    return dict({element.tag: [riptext(element), dict(element.attrib)]})
 
 
-def normalize_space(element):
-    if not element.text:
-        return ""
-    return " ".join(element.text.split())
+def riptext(element):
+    text = normalize_space("".join(element.itertext()))
+    if not text:
+        return ""  # blank out False so we don't see it in the output
+    return text
+
+
+def normalize_space(string: str) -> str:
+    # rename since it no longer works like XPath normalize-space(.)?
+    if not isinstance(string, str) or string == "":
+        return False  # so as to use in `if` tests
+    return " ".join(string.split())
 
 
 def main(argv=None):
@@ -60,7 +91,9 @@ def main(argv=None):
     )
     parser.add_argument("xml", help="source xml file")
     parser.add_argument(
-        "xpath", help="xpath to a record (one line per record in the output)"
+        "xpath",
+        help="xpath to a record (one line per record in the output)",
+        nargs="?",
     )
 
     if argv is None:
