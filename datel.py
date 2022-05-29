@@ -61,7 +61,7 @@ def main(argv=None):
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument("xml", help="source xml file")
-    parser.add_argument("xpath", help="xpath to a record (one line pre record in the output)")
+    parser.add_argument("xpath", help="xpath to a record (one line per record in the output)")
 
     if argv is None:
         argv = parser.parse_args()
