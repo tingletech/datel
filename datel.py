@@ -49,6 +49,8 @@ def datel_element(element):
 
 
 def normalize_space(element):
+    if not element.text:
+        return ""
     return " ".join(element.text.split())
 
 
