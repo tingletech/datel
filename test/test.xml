@@ -1,0 +1,24 @@
+<root>
+  <record n="1">
+    this is the dawning of the <age>age of mixed content</age> -- age of mixed content
+-- age of <m>mixed content</m> oh yea
+  </record>
+  <record n="2">
+    <author><first>11</first><last>12</last></author>
+    <author><first>21</first><last>22</last></author>
+    <author><first>31</first>middle<last>32</last></author>
+    <author><first>41</first> <!-- comment --> <last>42</last></author>
+  </record>
+  <record n="3">
+    <atag>a</atag>
+    <btag>
+b
+</btag>
+  </record>
+  <name></name>
+  <record>
+    <record>
+      <record>nested</record>
+    </record>
+  </record>
+</root>

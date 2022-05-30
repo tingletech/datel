@@ -1,0 +1,8 @@
+<angle_tests>
+  <t>></t>
+  <t>&lt;</t>
+  <t>&lt;></t>
+  <t>&lt;false>tag&lt;/false></t>
+  <t><true>tag</true></t>
+</angle_tests>
+

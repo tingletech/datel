@@ -6,13 +6,13 @@ import argparse
 import json
 import sys
 import xml.etree.ElementTree as ET
-from typing import Iterator, List
+from typing import Iterator, List, Tuple
 
 
 def datel_record_set(
     element: ET.Element,
     xpath: str = ".",
-    solsource: bool = False,
+    solsource: bool = True,
 ) -> Iterator[object]:
     """
     Takes an element, and an XPath expression pointing to the records.
@@ -21,7 +21,7 @@ def datel_record_set(
     """
     for record in element.findall(xpath):
         if solsource:
-            yield datel_to_solsource(datel_record(record))
+            yield datel_record_to_solsource(datel_record(record))
         else:
             yield datel_record(record)
 
@@ -36,7 +36,7 @@ def datel_record(
 
     ```
     <r><b>B</b></r>
-    [{'r': ['<b>B</b>', {}]}, {'b': ['B', {}]}]
+    [{'r': {'mix()': '<b>B</b>'}}, {'b': {'text()': 'B'}}]
     ```
     """
     return [datel_element(element) for element in record.iter()]
@@ -52,24 +52,26 @@ def datel_element(element: ET.Element) -> dict:
 
     The key is the XML element's tag name with namespaces in James Clark notation.
 
-    The value of the key is an array of two array elements.
+    The value of the key is a dict of the XML element's attributes, with one of two
+    additional keys.
 
-    - The first array element is a string containing the inner markup of XML element.
-
-    - The second array element is a dict of the attributes of the XML element.
-
-    The whole thing is a datel data element.
+     - `text()` contains the text of an element with no children
+     - `mix()` contains an xml fragment of an element with children
 
     ```
     <tag attribute="value">string of <inner>content</inner></tag>
-    {"tag": ["string of <inner>content</inner>", {"attribute": "value"}]}
+    {'tag': {'attribute': 'value', 'mix()': 'string of <inner>content</inner>'}}
     ```
     """  # noqa
-    return dict({element.tag: [innerxml(element), dict(element.attrib)]})
+    attributes = dict(element.attrib)
+    # add the inner XML or text as an attribute
+    k, v = innerxml(element)
+    attributes[k] = v
+    return dict({element.tag: attributes})
 
 
-def datel_to_solsource(datel_record):
-    """ reformat as one dict per record (pre-chew for spark) """
+def datel_record_to_solsource(datel_record):
+    """reformat as one dict per record (pre-chew for spark)"""
     spark_dict = {}
     for element in datel_record:
         k = list(element.keys())[0]
@@ -82,14 +84,35 @@ def datel_to_solsource(datel_record):
     return spark_dict
 
 
-def innerxml(element: ET.Element) -> str:
-    """like .innerHTML in javascript"""
-    return "".join(
-        (
-            element.text or "",
-            "".join(ET.tostring(e, "unicode") for e in element),
+def innerxml(element: ET.Element) -> Tuple[str, str]:
+    """like .innerHTML in javascript
+
+    why this business with `text()` and `mix()`? Consider this xml
+
+    ```
+    <angle_tests>
+      <t>></t>
+      <t>&lt;</t>
+      <t>&lt;></t>
+      <t>&lt;false>tag&lt;/false></t>
+      <t><true>tag</true></t>
+    </angle_tests>
+    ```
+    w/o it, there would be no way to tell if there are real tags in the
+    XML fragment or if there were literal greater than or less than characters.
+    """
+    if len(element) > 0:  # test elemen for children
+        return (
+            "mix()",
+            "".join(
+                (
+                    element.text or "",
+                    "".join(ET.tostring(e, "unicode") for e in element),
+                )
+            ),
         )
-    )
+    else:
+        return ("text()", element.text or "")
 
 
 def main(argv=None):
@@ -108,16 +131,16 @@ def main(argv=None):
         default=".",
     )
     parser.add_argument(
-        "--solsource",
-        action="store_true",
-        help="spark optimized output format",
+        "--no-solsource",
+        action="store_false",
+        help="don't merge elements into one dict per record",
     )
 
     if argv is None:
         argv = parser.parse_args()
 
     tree = ET.parse(argv.xml).getroot()
-    records = datel_record_set(tree, argv.xpath, argv.solsource)
+    records = datel_record_set(tree, argv.xpath, argv.no_solsource)
 
     had_output = False
     for record in records:

@@ -4,8 +4,6 @@ Pure python 99.9% losless transformation of XML to python `dict`s, JSON, or JSON
 
 All the headaches of XML, but with a flattened tree.
 
-Includes a `--solsource` spark optimized output format.
-
 ## Datel Data Element and Record Scheme
 
 Input XML with your records and an
@@ -16,9 +14,14 @@ The first step is to apply the XPath to the XML Document, iterating
 over each record.
 
 For each record, the next step is to iterate over each record node,
-creating an array for each record containing Datel Date Elements.
+creating an array for each record containing Datel Data Elements.
+Then, the datel elements are merged into one dict per record.
 
-The command outputs the XML as JSON Lines of Datel Records.
+The command outputs JSON Lines.
+
+The default format creates one dict per record, supplying the flag
+`--no-solsource` will enabling an order-preserving mode with one
+dict per XML Element in the source.
 
 ## install
 
