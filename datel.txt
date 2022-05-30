@@ -1,0 +1,84 @@
+Help on module datel:
+
+NAME
+    datel - Datel XML to JSONL Converter
+
+FUNCTIONS
+    datel_element(element: xml.etree.ElementTree.Element) -> dict
+        Datel Data Element
+        
+        Goal: represent an XML element as a python data structure suitable for converting to JSON.
+        
+        The XML element is converted to a dict with a single key.
+        
+        The key is the XML element's tag name with namespaces in James Clark notation.
+        
+        The value of the key is a dict of the XML element's attributes, with one of two
+        additional keys.
+        
+         - `text()` contains the text of an element with no children
+         - `mix()` contains an xml fragment of an element with children
+        
+        ```
+        <tag attribute="value">string of <inner>content</inner></tag>
+        {'tag': {'attribute': 'value', 'mix()': 'string of <inner>content</inner>'}}
+        ```
+    
+    datel_record(record: xml.etree.ElementTree.Element) -> List[object]
+        A Datel Record is an array Datel Data Elements.
+        
+        A Datel Record is in the same order as the XML source, but the
+        hierarchy is flattened.
+        
+        ```
+        <r><b>B</b></r>
+        [{'r': {'mix()': '<b>B</b>'}}, {'b': {'text()': 'B'}}]
+        ```
+    
+    datel_record_set(element: xml.etree.ElementTree.Element, xpath: str = '.', solsource: bool = True) -> Iterator[object]
+        Takes an element, and an XPath expression pointing to the records.
+        
+        Returns an Iterator of Datel Records matching the XPath in the XML
+    
+    datel_record_to_solsource(datel_record)
+        reformat as one dict per record (pre-chew for spark)
+    
+    innerxml(element: xml.etree.ElementTree.Element) -> Tuple[str, str]
+        like .innerHTML in javascript
+        
+        why this business with `text()` and `mix()`? Consider this xml
+        
+        ```
+        <angle_tests>
+          <t>></t>
+          <t>&lt;</t>
+          <t>&lt;></t>
+          <t>&lt;false>tag&lt;/false></t>
+          <t><true>tag</true></t>
+        </angle_tests>
+        ```
+        w/o it, there would be no way to tell if there are real tags in the
+        XML fragment or if there were literal greater than or less than characters.
+    
+    main(argv=None)
+
+DATA
+    Iterator = typing.Iterator
+        A generic version of collections.abc.Iterator.
+    
+    List = typing.List
+        A generic version of list.
+    
+    Tuple = typing.Tuple
+        Tuple type; Tuple[X, Y] is the cross-product type of X and Y.
+        
+        Example: Tuple[T1, T2] is a tuple of two elements corresponding
+        to type variables T1 and T2.  Tuple[int, float, str] is a tuple
+        of an int, a float and a string.
+        
+        To specify a variable-length tuple of homogeneous type, use Tuple[T, ...].
+
+FILE
+    /Users/tingle/code/datel/datel.py
+
+
