@@ -122,13 +122,15 @@ def main(argv=None):
     )
     parser.add_argument(
         "xml",
-        help="source xml file",
+        help="source xml file (- for stdin)",
+        type=argparse.FileType('r'),
     )
     parser.add_argument(
         "xpath",
         help="xpath to a record (one line per record in the output)",
         nargs="?",
         default=".",
+        type=str,
     )
     parser.add_argument(
         "--no-solsource",
