@@ -12,6 +12,7 @@ from typing import Iterator, List
 def datel_record_set(
     element: ET.Element,
     xpath: str = ".",
+    solsource: bool = False,
 ) -> Iterator[object]:
     """
     Takes an element, and an XPath expression pointing to the records.
@@ -19,7 +20,10 @@ def datel_record_set(
     Returns an Iterator of Datel Records matching the XPath in the XML
     """
     for record in element.findall(xpath):
-        yield datel_record(record)
+        if solsource:
+            yield datel_to_solsource(datel_record(record))
+        else:
+            yield datel_record(record)
 
 
 def datel_record(
@@ -64,6 +68,20 @@ def datel_element(element: ET.Element) -> dict:
     return dict({element.tag: [innerxml(element), dict(element.attrib)]})
 
 
+def datel_to_solsource(datel_record):
+    """ reformat as one dict per record (pre-chew for spark) """
+    spark_dict = {}
+    for element in datel_record:
+        k = list(element.keys())[0]
+        try:
+            spark_dict[k].append(element[k])
+        except KeyError:
+            spark_dict[k] = [
+                element[k],
+            ]
+    return spark_dict
+
+
 def innerxml(element: ET.Element) -> str:
     """like .innerHTML in javascript"""
     return "".join(
@@ -89,12 +107,17 @@ def main(argv=None):
         nargs="?",
         default=".",
     )
+    parser.add_argument(
+        "--solsource",
+        action="store_true",
+        help="spark optimized output format",
+    )
 
     if argv is None:
         argv = parser.parse_args()
 
     tree = ET.parse(argv.xml).getroot()
-    records = datel_record_set(tree, argv.xpath)
+    records = datel_record_set(tree, argv.xpath, argv.solsource)
 
     had_output = False
     for record in records:

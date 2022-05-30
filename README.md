@@ -4,6 +4,8 @@ Pure python 99.9% losless transformation of XML to python `dict`s, JSON, or JSON
 
 All the headaches of XML, but with a flattened tree.
 
+Includes a `--solsource` spark optimized output format.
+
 ## Datel Data Element and Record Scheme
 
 Input XML with your records and an

@@ -13,8 +13,8 @@ expected1 = [
 ]
 
 
-got2 = list(datel.datel_record_set(root, "record"))
-expected2 = [[{"record": ['RR<title a="2" />', {}]}, {"title": ["", {"a": "2"}]}]]
+got2 = list(datel.datel_record_set(root, "record", solsource=True))
+expected2 = [{'record': [['RR<title a="2" />', {}]], 'title': [['', {'a': '2'}]]}]
 
 test1 = bool(got1 == expected1)
 test2 = bool(got2 == expected2)
