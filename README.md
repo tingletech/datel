@@ -1,8 +1,6 @@
 # Datel XML Transliterator
 
-Pure python 99.9% losless transformation of XML to python `dict`s, JSON, or JSON Lines.
-
-All the headaches of XML, but with a flattened tree.
+Pure python 99.9% losless transformations of XML to python `dict`s, JSON, or JSON Lines.
 
 ## Datel Data Element and Record Scheme
 
