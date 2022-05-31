@@ -35,13 +35,15 @@ FUNCTIONS
         [{'r': {'mix()': '<b>B</b>'}}, {'b': {'text()': 'B'}}]
         ```
     
-    datel_record_set(element: xml.etree.ElementTree.Element, xpath: str = '.', solsource: bool = True) -> Iterator[object]
+    datel_record_set(element: xml.etree.ElementTree.Element, xpath: str = '.', solsource: bool = True, recursive: bool = False) -> Iterator[object]
         Takes an element, and an XPath expression pointing to the records.
         
         Returns an Iterator of Datel Records matching the XPath in the XML
     
     datel_record_to_solsource(datel_record)
         reformat as one dict per record (pre-chew for spark)
+    
+    datel_recursive(element, solsource=True)
     
     innerxml(element: xml.etree.ElementTree.Element) -> Tuple[str, str]
         like .innerHTML in javascript
