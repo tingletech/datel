@@ -13,6 +13,7 @@ def datel_record_set(
     element: ET.Element,
     xpath: str = ".",
     solsource: bool = True,
+    recursive: bool = False,
 ) -> Iterator[object]:
     """
     Takes an element, and an XPath expression pointing to the records.
@@ -20,7 +21,9 @@ def datel_record_set(
     Returns an Iterator of Datel Records matching the XPath in the XML
     """
     for record in element.findall(xpath):
-        if solsource:
+        if recursive is True:
+            yield datel_recursive(record, recursive)
+        elif solsource is True:
             yield datel_record_to_solsource(datel_record(record))
         else:
             yield datel_record(record)
@@ -84,6 +87,25 @@ def datel_record_to_solsource(datel_record):
     return spark_dict
 
 
+def datel_recursive(element, solsource=True):
+    el = dict(element.attrib)
+    if element.text:
+        el["text()"] = element.text
+    for e in element:
+        kid = datel_recursive(e)
+        try:
+            el["kids()"].append(kid)
+        except KeyError:
+            el["kids()"] = [kid]
+    kds = el.get("kids()", False)
+    if kds and solsource:
+        del el["kids()"]
+        el["kids{}"] = datel_record_to_solsource(kds)
+    if element.tail:
+        el["tail()"] = element.tail
+    return {element.tag: el}
+
+
 def innerxml(element: ET.Element) -> Tuple[str, str]:
     """like .innerHTML in javascript
 
@@ -123,7 +145,7 @@ def main(argv=None):
     parser.add_argument(
         "xml",
         help="source xml file (- for stdin)",
-        type=argparse.FileType('r'),
+        type=argparse.FileType("r"),
     )
     parser.add_argument(
         "xpath",
@@ -137,12 +159,17 @@ def main(argv=None):
         action="store_false",
         help="don't merge elements into one dict per record",
     )
+    parser.add_argument(
+        "--recursive",
+        action="store_true",
+        help="don't flatten XML",
+    )
 
     if argv is None:
         argv = parser.parse_args()
 
     tree = ET.parse(argv.xml).getroot()
-    records = datel_record_set(tree, argv.xpath, argv.no_solsource)
+    records = datel_record_set(tree, argv.xpath, argv.no_solsource, argv.recursive)
 
     had_output = False
     for record in records:
